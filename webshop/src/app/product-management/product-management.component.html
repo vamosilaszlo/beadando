@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>{{ 'PRODUCT_MANAGEMENT' | translate }}</h1>
+
+    
+    <!-- Új termék hozzáadása -->
+    <form (ngSubmit)="addProduct()" *ngIf="!editingProduct">
+      <input [(ngModel)]="newProduct.name" name="name" placeholder="{{ 'NAME' | translate }}" required />
+      <input [(ngModel)]="newProduct.category" name="category" placeholder="{{ 'CATEGORY' | translate }}" required />
+      <input [(ngModel)]="newProduct.description" name="description" placeholder="{{ 'DESCRIPTION' | translate }}" />
+      <input [(ngModel)]="newProduct.price" name="price" type="number" step="0.01" placeholder="{{ 'PRICE' | translate }}" required />
+      <button class="btn btn-success" type="submit">{{ 'ADD' | translate }}</button>
+    </form>
+  
+    <!-- Termék módosítása -->
+    <form (ngSubmit)="updateProduct()" *ngIf="editingProduct">
+      <input [(ngModel)]="editingProduct.name" name="name" placeholder="{{ 'NAME' | translate }}" required />
+      <input [(ngModel)]="editingProduct.category" name="category" placeholder="{{ 'CATEGORY' | translate }}" required />
+      <input [(ngModel)]="editingProduct.description" name="description" placeholder="{{ 'DESCRIPTION' | translate }}" />
+      <input [(ngModel)]="editingProduct.price" name="price" type="number" step="0.01" placeholder="{{ 'PRICE' | translate }}" required />
+      <button class="btn btn-success" type="submit">{{ 'SAVE' | translate }}</button>
+      <button class="btn btn-yellow" type="button" (click)="cancelEdit()">{{ 'CANCEL' | translate }}</button>
+    </form>
+  
+    <!-- Terméklista -->
+    <ul>
+      <li *ngFor="let product of products">
+        {{ product.name }} - {{ product.category }} - {{ product.price | currency }}
+        <button class="btn btn-info"(click)="startEdit(product)">{{ 'EDIT' | translate }}</button>
+        <button class="btn btn-danger"(click)="deleteProduct(product.id)">{{ 'DELETE' | translate }}</button>
+      </li>
+    </ul>
+  </div>
+  

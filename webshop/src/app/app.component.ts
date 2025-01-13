@@ -1,10 +1,21 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'webshop';
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['en', 'hu']); // Elérhető nyelvek
+    this.translate.setDefaultLang('hu'); // Alapértelmezett nyelv
+    // this.translate.use('en'); // Használt nyelv
+
+
+  }
+
+  changeLanguage(lang: string): void {
+    this.translate.use(lang);
+  }
 }
