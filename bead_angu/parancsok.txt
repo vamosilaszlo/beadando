@@ -1,0 +1,14 @@
+2024nov13
+
+ng n FoodWebshop --standalone=false
+cd FoodWebshop
+    ng g c login
+    ng g c shop
+    ng g c products
+    ng g c cart
+    ng g c error
+   
+    ng g s base
+    ng add @ng-bootstrap/ng-bootstrap
+    angular.json style[]=>script[] css=>json
+    ng serve -o

@@ -1,0 +1,15 @@
+app-products{
+    /* background-color: aqua;
+    color:red; */
+    display: block;
+    width: 80%;
+    float:left;
+    height:100vh;
+}
+app-cart{
+    /* background-color: bisque; */
+    display: block;
+    width:20%;
+    float:left;
+    height:100vh;
+}
