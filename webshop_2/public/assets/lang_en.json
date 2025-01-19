@@ -1,0 +1,21 @@
+
+
+    {
+  "menuItems": [
+    {"link": "home", "text": "Home"},
+    {"link": "login", "text": "Login"},
+    {"link": "register", "text": "Register"},
+    {"link": "products", "text": "Products"}
+  ],
+  "columns": [
+    {"key": "name", "text": "Name", "type": "text"},
+    {"key": "category", "text": "Category", "type": "number"},
+    {"key": "description", "text": "Description", "type": "text"},
+    {"key": "price", "text": "Price", "type": "number"}
+  ],
+  "buttons": {
+    "add": "Add",
+    "modify": "Modify",
+    "delete": "Delete"
+  }
+}

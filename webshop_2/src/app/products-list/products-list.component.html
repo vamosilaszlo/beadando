@@ -1,0 +1,42 @@
+
+<div class="row">
+  <div *ngFor="let oszlop of columns" class="col">
+      <div class="fs-5 text-center">{{oszlop.text}}</div>
+  </div>
+  <div class="col"></div>
+</div>
+<!-- Fejléc Kiíratás vége -->
+
+<!-- Új rekord felvétele -->
+<div  class="row">
+  <div *ngFor="let oszlop of oszlopok" class="col">
+      <div class="m-1"><input [(ngModel)]="newCikk[oszlop]" type="text" class="form-control"></div>
+  </div>
+  <div class="col">
+      <button (click)="newData()" type="button" class="btn btn-primary">{{buttons.add}}</button>
+  </div>
+</div>
+
+<!-- Táblázat megjelenítése -->
+<div *ngFor="let cikk of cikkek" class="row">
+  <div *ngFor="let oszlop of oszlopok" class="col">
+      <div class="m-1"><input [(ngModel)]="cikk[oszlop]" type="text" class="form-control"></div>
+  </div>
+  <div class="col">
+      <button (click)="updateData(cikk)" type="button" class="btn btn-success">{{buttons.modify}}</button>
+      <button (click)="deleteData(cikk)" type="button" class="btn btn-danger ms-2">{{buttons.delete}}</button>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

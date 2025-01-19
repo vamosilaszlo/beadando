@@ -1,0 +1,21 @@
+
+{
+  "menuItems": [
+    {"link": "home", "text": "Kezdőlap"},
+    {"link": "login", "text": "Belépés"},
+    {"link": "register", "text": "Regisztrálás"},
+    {"link": "products", "text": "Termékek"}
+  ],
+  "columns": [
+    {"key": "name", "text": "Megnevezés", "type": "text"},
+    {"key": "category", "text": "Kategória", "type": "number"},
+    {"key": "description", "text": "Leírás", "type": "text"},
+    {"key": "price", "text": "Ár", "type": "number"}
+  ],
+  "buttons": {
+    "add": "Hozzáadás",
+    "modify": "Módosítás",
+    "delete": "Törlés"
+  }
+}
+
